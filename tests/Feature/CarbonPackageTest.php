@@ -104,21 +104,21 @@ class CarbonPackageTest extends TestCase
     public function testFileAssertions()
     {
         $this->assertFileExists(__FILE__);
-        $this->assertFileDoesNotExist('public/index2.php');
+        $this->assertFileDoesNotExist('testdirectory/test2.php');
         $this->assertFileIsReadable(__FILE__);
-        $this->assertFileIsNotReadable('public/index3.php');
+        $this->assertFileIsNotReadable('testdirectory/test3.php');
         $this->assertFileIsWritable(__FILE__);
-        $this->assertFileIsNotWritable('public/index3.php');
+        $this->assertFileIsNotWritable('testdirectory/test3.php');
     }
 
     public function testDirectoryAssertions()
     {
         $this->assertDirectoryExists(__DIR__);
-        $this->assertDirectoryDoesNotExist('public2/');
+        $this->assertDirectoryDoesNotExist('testdirectory2/');
         $this->assertDirectoryIsReadable(__DIR__);
-        $this->assertDirectoryIsNotReadable('public3/');
+        $this->assertDirectoryIsNotReadable('testdirectory3/');
         $this->assertDirectoryIsWritable(__DIR__);
-        $this->assertDirectoryIsNotWritable('public3/');
+        $this->assertDirectoryIsNotWritable('testdirectory3/');
     }
 
     public function testExceptionAssertions()
